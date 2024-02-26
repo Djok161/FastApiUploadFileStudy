@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Text Files</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='styles.css') }}">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>List of Text Files</h1>
+        <ul>
+            {% for file_name in file_names %}
+                <li>{{ file_name }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
