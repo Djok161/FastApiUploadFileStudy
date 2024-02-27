@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>List of Text Files</title>
     <link rel="stylesheet" href="{{ url_for('static', path='styles.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
 </head>
 <body>
     <div class="container mt-5">
         <h1>List of Text Files</h1>
         <ul>
             {% for file_name in file_names %}
-                <li>{{ file_name }}</li>
+                <li><a href="/view_file/{{ file_name }}"> {{ file_name }}</a></li>
             {% endfor %}
         </ul>
     </div>

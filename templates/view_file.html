@@ -1,14 +1,17 @@
-<html lang="en">
+ <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View File</title>
     <link rel="stylesheet" href="{{ url_for('static', path='styles.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
 </head>
 <body>
     <div class="container mt-5">
         <h1>{{ file_name }}</h1>
         <pre>{{ file_content }}</pre>
+        <a href="/list_files/">Обратно</a>
     </div>
 </body>
 </html>

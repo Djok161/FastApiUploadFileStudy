@@ -19,7 +19,7 @@ def read_form(request: Request):
 @app.post("/save_data/")
 def save_data(request: Request, file_name: str = Form(...), napolnenie: str = Form(...)):
 	if not file_name.lower().endswith(".txt"):
-		raise HTTPException(status_code=400, detail="File must have .txt extension")
+		raise HTTPException(status_code=400, detail="only .txt")
 	with open(f"saved_txt/{file_name}", "w") as f:
 		f.write(napolnenie)
 	return templates.TemplateResponse("succes.html", {"request": request, "file_name": file_name})
